@@ -1,10 +1,14 @@
-import logo from './logo.svg';
+import Button from "./components/button/button"
+import Header from "./components/header/header"
+import AddTask from "./components/add-task/addTask"
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>React TodoList</h1>
+      <Header />
+      <AddTask />
+      <Button />
     </div>
   );
 }
