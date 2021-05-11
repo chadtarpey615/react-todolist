@@ -1,6 +1,7 @@
 import Button from "./components/button/button"
 import Header from "./components/header/header"
 import AddTask from "./components/add-task/addTask"
+import Task from "./components/task/Task"
 import './App.css';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <AddTask />
       <Button />
+      <Task />
     </div>
   );
 }
