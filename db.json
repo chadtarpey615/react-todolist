@@ -1,0 +1,22 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Clean Bathrooms",
+      "date": "May 12 2021",
+      "task": "deep clean all bathrooms in my house"
+    },
+    {
+      "id": "2",
+      "title": "Code",
+      "date": "May 12 2021",
+      "task": "Get better at coding"
+    },
+    {
+      "id": "3",
+      "title": "Lawn work ",
+      "date": "May 12 2021",
+      "task": "Mow front and back yards"
+    }
+  ]
+}
