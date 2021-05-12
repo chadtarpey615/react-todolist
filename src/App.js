@@ -1,6 +1,5 @@
-import Button from "./components/button/button"
 import Header from "./components/header/header"
-import AddTask from "./components/add-task/addTask"
+import AddTask from "./components/add-task/AddTask"
 import Task from "./components/task/Task"
 import './App.css';
 
@@ -9,7 +8,6 @@ function App() {
     <div className="App">
       <Header />
       <AddTask />
-      <Button />
       <Task />
     </div>
   );
