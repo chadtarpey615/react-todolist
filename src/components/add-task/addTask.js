@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-// import Button from "../button/button"
+import Button from "../button/button"
 import api from "../../utils/api"
 export default function AddTask(props) {
 
@@ -13,24 +13,14 @@ export default function AddTask(props) {
         const { name, value } = event.target
         setTasks({ ...tasks, [name]: value })
         console.log(tasks)
-        // const data = {
-        //     id: "4",
-        //     title: name,
-        //     date: Date.now,
-        //     task: name.task
 
-        // }
-        // const baseUrl = "http://localhost:4000/tasks";
-        // axios.post(baseUrl + data)
-        //     .then((res) => res.stringify())
-        //     .catch((err) => console.log(err))
     }
 
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log("hit")
         api.saveTask({
-            id: Math.floor(Math.random() * 100),
+            id: Math.floor(Math.random() * 1000) + 1,
             title: tasks.title,
             date: tasks.date,
             task: tasks.task
@@ -64,7 +54,7 @@ export default function AddTask(props) {
             </div>
 
             <div className="btn">
-                <button onClick={handleSubmit}>Add Task</button>
+                <Button handleSubmit={handleSubmit} color="green" text="add" />
             </div>
         </form>
     )

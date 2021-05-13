@@ -1,13 +1,13 @@
 import React from 'react'
 
-export default function button(props) {
+export default function button({ color, text, handleSubmit }) {
     const handleInput = (e) => {
         e.preventDefault()
         console.log(e.target.value)
     }
     return (
         <div className="btn">
-            <button onClick={handleInput}>Add Task</button>
+            <button style={{ backgroundColor: color }} onClick={handleSubmit}>{text}</button>
         </div>
     )
 }
