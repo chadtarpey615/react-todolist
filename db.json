@@ -1,73 +1,22 @@
 {
   "tasks": [
     {
-      "id": "1",
-      "title": "Clean Bathrooms",
-      "date": "May 12 2021",
-      "task": "deep clean all bathrooms in my house"
+      "id": 705,
+      "title": "Mow the lawn",
+      "date": "05/15/21",
+      "task": "cut the front and back yard"
     },
     {
-      "id": "2",
-      "title": "Code",
-      "date": "May 12 2021",
-      "task": "Get better at coding"
-    },
-    {
-      "id": "3",
-      "title": "Lawn work ",
-      "date": "May 12 2021",
-      "task": "Mow front and back yards"
-    },
-    {
-      "id": 45,
-      "title": "clean",
-      "date": "02/26/2021",
-      "task": "bath cat"
-    },
-    {
-      "id": 7,
-      "title": "clean",
-      "date": "02/26/2021",
-      "task": "bath cat"
-    },
-    {
-      "id": 53,
-      "title": "clean",
-      "date": "02/26/2021",
-      "task": "bath cat"
-    },
-    {
-      "id": 20,
-      "title": "test",
-      "date": "02/26/2021",
-      "task": "test"
-    },
-    {
-      "id": 31,
-      "title": "",
+      "id": 737,
+      "title": "Homework",
       "date": "",
-      "task": ""
+      "task": "Finish math homework"
     },
     {
-      "id": 631,
-      "title": "homework",
-      "date": "05/13/2021",
-      "task": "finish homework for math class"
-    },
-    {
-      "id": 399,
-      "title": "TEST",
-      "date": "02/17/2021",
-      "task": "ff"
-    },
-    {
-      "id": 37
-    },
-    {
-      "id": 791
-    },
-    {
-      "id": 176
+      "id": 287,
+      "title": "cook",
+      "date": "05/15/21",
+      "task": "cook some mac and cheese"
     }
   ]
 }

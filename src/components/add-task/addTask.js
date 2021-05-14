@@ -56,7 +56,9 @@ export default function AddTask() {
                 <label htmlFor="task">Task</label>
                 <input onChange={handleInput} type="text" name="task" placeholder="enter task" />
             </div>
-
+            <div className="btn">
+                <button onClick={handleSubmit}>Add Task</button>
+            </div>
 
         </form>
     )
