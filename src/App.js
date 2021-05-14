@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import Header from "./components/header/header"
 import AddTask from "./components/add-task/AddTask"
 import Task from "./components/task/Task";
-import api from "./utils/api"
 import './App.css';
 
 function App() {
 
   const [task, setTask] = useState([]);
+  const [title, setTitle] = useState("");
 
   useEffect(() => {
     const getTask = async () => {
@@ -15,6 +15,8 @@ function App() {
       setTask(taskFromServer)
     }
     getTask();
+    console.log(task)
+
   }, [])
 
   const getData = async () => {
@@ -27,35 +29,35 @@ function App() {
 
   }
 
-  const handleInput = (event) => {
-    event.preventDefault();
-    const { name, value } = event.target
-    setTask({ ...task, [name]: value })
-    console.log(task)
+  // const handleInput = (event) => {
+  //   event.preventDefault();
+  //   const { name, value } = event.target
+  //   setTask({ ...task, [name]: value })
+  //   console.log(task)
 
-  }
+  // }
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log("hit")
-    api.saveTask({
-      id: Math.floor(Math.random() * 1000) + 1,
-      title: task.title,
-      date: task.date,
-      task: task.task
-    })
-      .then(() => setTask({
-        id: "",
-        title: "",
-        date: "",
-        task: ""
-      }))
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   console.log("hit")
+  //   api.saveTask({
+  //     id: Math.floor(Math.random() * 1000) + 1,
+  //     title: task.title,
+  //     date: task.date,
+  //     task: task.task
+  //   })
+  //     .then(() => setTask({
+  //       id: "",
+  //       title: "",
+  //       date: "",
+  //       task: ""
+  //     }))
 
-      .catch((err) => console.log(err))
+  //     .catch((err) => console.log(err))
 
 
 
-  }
+  // }
 
   const deleteTask = async (id) => {
     const res = await fetch(`http://localhost:4000/tasks/${id}`, {
@@ -67,8 +69,8 @@ function App() {
   }
   return (
     <div className="container">
-      <Header handleSubmit={handleSubmit} />
-      <AddTask handleInput={handleInput} />
+      <Header />
+      <AddTask />
       <Task task={task} />
     </div>
   );

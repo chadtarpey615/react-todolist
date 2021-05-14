@@ -1,20 +1,44 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
+import api from "../../utils/api"
+
 import Button from "../button/button"
 
-export default function AddTask({ handleInput }) {
+export default function AddTask() {
 
-    // const [tasks, setTasks] = useState({});
+    const [tasks, setTasks] = useState({});
 
-    // useEffect(() => {
-    //     console.log(task)
-    // })
-    // const handleInput = (event) => {
-    //     event.preventDefault();
-    //     const { name, value } = event.target
-    //     setTasks({ ...tasks, [name]: value })
-    //     console.log(tasks)
+    useEffect(() => {
+        console.log(tasks)
+    })
+    const handleInput = (event) => {
+        event.preventDefault();
+        const { name, value } = event.target
+        setTasks({ ...tasks, [name]: value })
+        console.log(tasks)
 
-    // }
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        console.log("hit")
+        api.saveTask({
+            id: Math.floor(Math.random() * 1000) + 1,
+            title: tasks.title,
+            date: tasks.date,
+            task: tasks.task
+        })
+            .then(() => setTasks({
+                id: "",
+                title: "",
+                date: "",
+                task: ""
+            }))
+
+            .catch((err) => console.log(err))
+
+
+
+    }
 
 
 
